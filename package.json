@@ -1,0 +1,23 @@
+{
+  "name": "tokn-web",
+  "version": "1.0.0",
+  "description": "The source code for the official website of TOKUEN",
+  "homepage": "https://github.com/danskyvich/tokn-web#readme",
+  "bugs": {
+    "url": "https://github.com/danskyvich/tokn-web/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danskyvich/tokn-web.git"
+  },
+  "license": "ISC",
+  "author": "TOKUEN",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
