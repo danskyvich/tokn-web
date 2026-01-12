@@ -1,0 +1,13 @@
+@import 'tailwindcss';
+
+@layer components {
+
+    /* Center container on auth pages, reusable*/
+    .center-container {
+        @apply box-border m-70 flex flex-1 flex-row border-2 w-2/3 border-stone-300 rounded-xl shadow-md
+    }
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
