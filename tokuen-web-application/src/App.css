@@ -8,9 +8,11 @@
   /* Global variables goes here*/
   --header: #000000;
   --subheader: #7b7b7b;
+    --subheader-two: #DEDEDE;
   --filled-button: #7E4BA6;
     --filled-button-dark: #4F2271;
   --white: #ffffff;
+  --heading-bold: 700;
 }
 
 * {
@@ -21,3 +23,22 @@ hr {
   border: none;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: var(--heading-bold)
+}
+h2 {
+  font-size: 2.25rem;
+  font-weight: var(--heading-bold)
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: var(--heading-bold)
+}
+li {
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+a {
+  scroll-behavior: smooth;
+}

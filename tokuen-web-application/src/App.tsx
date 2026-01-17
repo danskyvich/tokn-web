@@ -1,10 +1,19 @@
+import { createRouter, RouterProvider } from '@tanstack/react-router'
+import { routeTree } from './routeTree.gen';
 import './App.css'
-import AuthEntry from './pages/authentication/auth-entry/auth-entry'
+
+const router = createRouter({ routeTree });
+
+declare module '@tanstack/react-router' {
+  interface Register {
+    router: typeof router;
+  }
+}
 
 function App() {
   return (
     <>
-      <AuthEntry/>
+      <RouterProvider router={router}/>
     </>
   )
 }
