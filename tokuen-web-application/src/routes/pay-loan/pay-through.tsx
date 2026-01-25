@@ -2,6 +2,7 @@ import { createFileRoute, Link } from '@tanstack/react-router'
 import Header from '../../components/header'
 import FilledButton from '../../components/filled-button'
 import AddIcon from '@mui/icons-material/Add';
+import classnames from 'classnames'
 
 export const Route = createFileRoute('/pay-loan/pay-through')({
   component: RouteComponent,
@@ -29,6 +30,8 @@ function RouteComponent() {
             labelLink='first'
             alt='mastercard-logo'
             num='5363  ••••  ••••  ••••'
+            subtext=''
+            styles=''
           />
           <RadioButtonCard
             text='Gcash XChange'
@@ -37,6 +40,8 @@ function RouteComponent() {
             labelLink='first'
             alt='mastercard-logo'
             num='(+63)912 345 6789'
+            subtext=''
+            styles=''
           />
           <RadioButtonCard
             text='Maribank Debitcard'
@@ -45,6 +50,8 @@ function RouteComponent() {
             labelLink='first'
             alt='mastercard-logo'
             num='5363  ••••  ••••  ••••'
+            subtext=''
+            styles=''
           />
         </div>
 
@@ -55,6 +62,19 @@ function RouteComponent() {
           <AddIcon sx={{fontSize: '3rem'}}/>
           <p>Manage your saved payment methods</p>
         </Link>
+
+        <p className='self-center'>or</p>
+
+        <RadioButtonCard
+            text='Main Wallet'
+            group='payment-methods'
+            icon=''
+            labelLink='first'
+            num='5363  ••••  ••••  ••••'
+            subtext='₱10,000'
+            alt=''
+            styles='bg-linear-90 from-indigo-500 to-fuchsia-800 text-white font-semibold'
+          />
 
         <span className='flex-auto h-full'/>
 
@@ -74,14 +94,23 @@ interface Props {
   group : string,
   labelLink : string,
   alt : string,
-  num : string
+  num : string,
+  subtext : string,
+  styles : string
 }
 
-const RadioButtonCard = ({text, icon, group, labelLink, alt, num} : Props) => {
-  return <div className='flex flex-1 w-full h-fit text-xl items-center border-2 rounded-xl p-6 gap-4'>
+const RadioButtonCard = ({text, icon, group, labelLink, alt, num, styles, subtext} : Props) => {
+
+  const classStr = classnames(
+    'flex flex-1 w-full h-fit text-xl items-center border-2 rounded-xl p-6 gap-4', styles
+  )
+  return <div className={classStr} >
     <input className='w-5 h-5 cursor-pointer' type='radio' name={group} id={labelLink}/>
     <img className='w-15 h-auto' src={icon} alt={alt}/>
-    <label htmlFor={labelLink}>{text}</label>
+    <div className='flex flex-1 flex-col w-full h-fit'>
+      <label htmlFor={labelLink}>{text}</label>
+      <p>{subtext}</p>
+    </div>
     <span className='flex-auto h-full'/>
     <p>{num}</p>
   </div>

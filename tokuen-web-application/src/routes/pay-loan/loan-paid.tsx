@@ -75,7 +75,7 @@ function RouteComponent() {
             buttonText='Continue'
             effects='black-button-outlined'
             textSize=''
-            url=''
+            url='/loans/loan-list'
         />
     </section>
   </div>

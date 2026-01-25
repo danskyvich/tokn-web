@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
+import classnames from 'classnames'
 
 {/*Material Icons components*/}
 import GenHeader from '../../components/header-tokuen-logo'
@@ -108,24 +109,24 @@ function RouteComponent() {
       {/**Bottom buttons */}
       <div className='flex flex-1 flex-col w-full h-fit justify-center text-xl'>
         <BottomButtons
-        text='Refer and Earn'
-        url='/refer-and-earn/'
-        icon={<CardGiftcardIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
+          text='Refer and Earn'
+          url='/refer-and-earn/'
+          icon={<CardGiftcardIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
         <BottomButtons
-        text='Loan Calculator'
-        url=''
-        icon={<CalculateIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
+          text='Loan Calculator'
+          url='/calculator/'
+          icon={<CalculateIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
         <BottomButtons
-        text='Settings'
-        url=''
-        icon={<SettingsIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
+          text='Settings'
+          url=''
+          icon={<SettingsIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
         <BottomButtons
-        text='Help Calculator'
-        url=''
-        icon={<HelpIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
+          text='Help'
+          url=''
+          icon={<HelpIcon sx={{ fontSize: 'var(--icon-size-normal)'}}/>}
         />
       </div>
 
@@ -201,11 +202,12 @@ interface Props {
 }
 
 const BottomButtons = ({text, icon, url} : Props) => {
-  return <div className='cursor-pointer flex flex-0 w-full h-fit px-5 
-    py-3 hover:bg-stone-200 gap-4 active:bg-stone-300 text-[1.1rem] items-center'>
+
+  const classStr = classnames(
+    'cursor-pointer flex flex-0 w-full h-fit px-5 py-3 hover:bg-stone-200 gap-4 active:bg-stone-300 text-[1.1rem] items-center'
+  )
+  return <Link to={url} className={classStr}>
     {icon}
-    <Link to={url}
-      className=''
-    >{text}</Link>
-  </div>
+    {text}
+    </Link>
 }

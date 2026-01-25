@@ -1,4 +1,3 @@
-import GenHeader from "../../components/header-tokuen-logo.tsx"
 import FilledButton from "../../components/filled-button.tsx"
 import Stack from '@mui/material/Stack'
 import OutlinedButton from "../../components/outlined-button.tsx"
@@ -23,12 +22,10 @@ export default function AuthEntry() {
                     
                     {/**TOKUEN + logo*/}
                     <div className='flex flex-1 w-full h-fit justify-start items-end mb-4 mt-8'>
-                        <GenHeader
-                            img={'./favicon.png'}
-                            text={'TOKUEN'}
-                            textColor={'black'}
-                            width={'3rem'}
-                        />
+                        <div className='flex flex-[0 1 auto] flex-row w-fit h-fit items-center text-black'>
+                            <img src='./../../../favicon.png' alt='icon' className='flex-1  h-auto w-12'/>
+                            <p className='flex-1 w-fit h-auto pl-2 font-extrabold text-3xl'>TOKUEN</p>
+                        </div>
                     </div>
 
                     {/**Header and Subheader */}
@@ -68,7 +65,6 @@ export default function AuthEntry() {
                             <FilledButton
                                 buttonText={'Log in'}
                                 url={'/authentication/verify-email/'}
-                                textWeight='font-semibold'
                                 textSize="text-[1rem]"
                                 effects='purple-button-filled'
                             />
