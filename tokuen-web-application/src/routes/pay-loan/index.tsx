@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import Header from '../../components/header'
-import FilledButton from '../../components/filled-button'
+import FilledButton from '../../components/button'
 
 export const Route = createFileRoute('/pay-loan/')({
   component: RouteComponent,

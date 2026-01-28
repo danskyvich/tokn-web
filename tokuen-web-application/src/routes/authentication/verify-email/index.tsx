@@ -1,7 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenHeader from '../../../components/header-tokuen-logo'
-import OutlinedButton from '../../../components/outlined-button'
-import FilledButton from '../../../components/filled-button'
+import Button from '../../../components/button'
 
 export const Route = createFileRoute('/authentication/verify-email/')({
   component: RouteComponent,
@@ -38,17 +37,16 @@ function RouteComponent() {
   
             {/**Form */}
             <div className='flex flex-1 flex-row gap-5 w-full h-fit justify-center items-center'>
-              <FilledButton
+              <Button
                 buttonText={'Log in'}
                 url={'/authentication/verify-email/email-verified'}
                 textSize="text-[1rem]"
                 effects='purple-button-filled'
               />
               {/** Return back*/}
-              <OutlinedButton
+              <Button
                 buttonText='Return to site &#8594;'
                 url='/'
-                textWeight='font-semibold'
                 textSize="text-[1rem]"
                 effects='black-button-outlined'
               />

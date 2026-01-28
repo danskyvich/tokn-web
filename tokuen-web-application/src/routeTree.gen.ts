@@ -23,9 +23,16 @@ import { Route as DeleteAccountIndexRouteImport } from './routes/delete-account/
 import { Route as DashboardIndexRouteImport } from './routes/dashboard/index'
 import { Route as CalculatorIndexRouteImport } from './routes/calculator/index'
 import { Route as AddPhoneNumberIndexRouteImport } from './routes/add-phone-number/index'
+import { Route as VerifyIdentityVerifyPersonalDetailsRouteImport } from './routes/verify-identity/verify-personal-details'
+import { Route as VerifyIdentityIdentityVerifiedRouteImport } from './routes/verify-identity/identity-verified'
+import { Route as VerifyIdentityIdDetailsRouteImport } from './routes/verify-identity/id-details'
+import { Route as VerifyIdentityFrontIdVerificationRouteImport } from './routes/verify-identity/front-id-verification'
+import { Route as VerifyIdentityFaceVerificationRouteImport } from './routes/verify-identity/face-verification'
 import { Route as VerifyIdentityChooseIdRouteImport } from './routes/verify-identity/choose-id'
+import { Route as VerifyIdentityBackIdVerificationRouteImport } from './routes/verify-identity/back-id-verification'
 import { Route as UpdatePhoneVerifyPhoneRouteImport } from './routes/update-phone/verify-phone'
 import { Route as UpdatePhoneNumberVerifiedRouteImport } from './routes/update-phone/number-verified'
+import { Route as TopUpTopUpMainRouteImport } from './routes/top-up/top-up-main'
 import { Route as TokuenInfoTermsAndConditionsRouteImport } from './routes/tokuen-info/terms-and-conditions'
 import { Route as TokuenInfoPrivacyPolicyRouteImport } from './routes/tokuen-info/privacy-policy'
 import { Route as PaymentMethodsCardAddedRouteImport } from './routes/payment-methods/card-added'
@@ -119,11 +126,46 @@ const AddPhoneNumberIndexRoute = AddPhoneNumberIndexRouteImport.update({
   path: '/add-phone-number/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerifyIdentityVerifyPersonalDetailsRoute =
+  VerifyIdentityVerifyPersonalDetailsRouteImport.update({
+    id: '/verify-identity/verify-personal-details',
+    path: '/verify-identity/verify-personal-details',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VerifyIdentityIdentityVerifiedRoute =
+  VerifyIdentityIdentityVerifiedRouteImport.update({
+    id: '/verify-identity/identity-verified',
+    path: '/verify-identity/identity-verified',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VerifyIdentityIdDetailsRoute = VerifyIdentityIdDetailsRouteImport.update({
+  id: '/verify-identity/id-details',
+  path: '/verify-identity/id-details',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const VerifyIdentityFrontIdVerificationRoute =
+  VerifyIdentityFrontIdVerificationRouteImport.update({
+    id: '/verify-identity/front-id-verification',
+    path: '/verify-identity/front-id-verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const VerifyIdentityFaceVerificationRoute =
+  VerifyIdentityFaceVerificationRouteImport.update({
+    id: '/verify-identity/face-verification',
+    path: '/verify-identity/face-verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const VerifyIdentityChooseIdRoute = VerifyIdentityChooseIdRouteImport.update({
   id: '/verify-identity/choose-id',
   path: '/verify-identity/choose-id',
   getParentRoute: () => rootRouteImport,
 } as any)
+const VerifyIdentityBackIdVerificationRoute =
+  VerifyIdentityBackIdVerificationRouteImport.update({
+    id: '/verify-identity/back-id-verification',
+    path: '/verify-identity/back-id-verification',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const UpdatePhoneVerifyPhoneRoute = UpdatePhoneVerifyPhoneRouteImport.update({
   id: '/update-phone/verify-phone',
   path: '/update-phone/verify-phone',
@@ -135,6 +177,11 @@ const UpdatePhoneNumberVerifiedRoute =
     path: '/update-phone/number-verified',
     getParentRoute: () => rootRouteImport,
   } as any)
+const TopUpTopUpMainRoute = TopUpTopUpMainRouteImport.update({
+  id: '/top-up/top-up-main',
+  path: '/top-up/top-up-main',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TokuenInfoTermsAndConditionsRoute =
   TokuenInfoTermsAndConditionsRouteImport.update({
     id: '/tokuen-info/terms-and-conditions',
@@ -278,9 +325,16 @@ export interface FileRoutesByFullPath {
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/top-up/top-up-main': typeof TopUpTopUpMainRoute
   '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
   '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/verify-identity/back-id-verification': typeof VerifyIdentityBackIdVerificationRoute
   '/verify-identity/choose-id': typeof VerifyIdentityChooseIdRoute
+  '/verify-identity/face-verification': typeof VerifyIdentityFaceVerificationRoute
+  '/verify-identity/front-id-verification': typeof VerifyIdentityFrontIdVerificationRoute
+  '/verify-identity/id-details': typeof VerifyIdentityIdDetailsRoute
+  '/verify-identity/identity-verified': typeof VerifyIdentityIdentityVerifiedRoute
+  '/verify-identity/verify-personal-details': typeof VerifyIdentityVerifyPersonalDetailsRoute
   '/add-phone-number': typeof AddPhoneNumberIndexRoute
   '/calculator': typeof CalculatorIndexRoute
   '/dashboard': typeof DashboardIndexRoute
@@ -319,9 +373,16 @@ export interface FileRoutesByTo {
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/top-up/top-up-main': typeof TopUpTopUpMainRoute
   '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
   '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/verify-identity/back-id-verification': typeof VerifyIdentityBackIdVerificationRoute
   '/verify-identity/choose-id': typeof VerifyIdentityChooseIdRoute
+  '/verify-identity/face-verification': typeof VerifyIdentityFaceVerificationRoute
+  '/verify-identity/front-id-verification': typeof VerifyIdentityFrontIdVerificationRoute
+  '/verify-identity/id-details': typeof VerifyIdentityIdDetailsRoute
+  '/verify-identity/identity-verified': typeof VerifyIdentityIdentityVerifiedRoute
+  '/verify-identity/verify-personal-details': typeof VerifyIdentityVerifyPersonalDetailsRoute
   '/add-phone-number': typeof AddPhoneNumberIndexRoute
   '/calculator': typeof CalculatorIndexRoute
   '/dashboard': typeof DashboardIndexRoute
@@ -361,9 +422,16 @@ export interface FileRoutesById {
   '/payment-methods/card-added': typeof PaymentMethodsCardAddedRoute
   '/tokuen-info/privacy-policy': typeof TokuenInfoPrivacyPolicyRoute
   '/tokuen-info/terms-and-conditions': typeof TokuenInfoTermsAndConditionsRoute
+  '/top-up/top-up-main': typeof TopUpTopUpMainRoute
   '/update-phone/number-verified': typeof UpdatePhoneNumberVerifiedRoute
   '/update-phone/verify-phone': typeof UpdatePhoneVerifyPhoneRoute
+  '/verify-identity/back-id-verification': typeof VerifyIdentityBackIdVerificationRoute
   '/verify-identity/choose-id': typeof VerifyIdentityChooseIdRoute
+  '/verify-identity/face-verification': typeof VerifyIdentityFaceVerificationRoute
+  '/verify-identity/front-id-verification': typeof VerifyIdentityFrontIdVerificationRoute
+  '/verify-identity/id-details': typeof VerifyIdentityIdDetailsRoute
+  '/verify-identity/identity-verified': typeof VerifyIdentityIdentityVerifiedRoute
+  '/verify-identity/verify-personal-details': typeof VerifyIdentityVerifyPersonalDetailsRoute
   '/add-phone-number/': typeof AddPhoneNumberIndexRoute
   '/calculator/': typeof CalculatorIndexRoute
   '/dashboard/': typeof DashboardIndexRoute
@@ -404,9 +472,16 @@ export interface FileRouteTypes {
     | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/top-up/top-up-main'
     | '/update-phone/number-verified'
     | '/update-phone/verify-phone'
+    | '/verify-identity/back-id-verification'
     | '/verify-identity/choose-id'
+    | '/verify-identity/face-verification'
+    | '/verify-identity/front-id-verification'
+    | '/verify-identity/id-details'
+    | '/verify-identity/identity-verified'
+    | '/verify-identity/verify-personal-details'
     | '/add-phone-number'
     | '/calculator'
     | '/dashboard'
@@ -445,9 +520,16 @@ export interface FileRouteTypes {
     | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/top-up/top-up-main'
     | '/update-phone/number-verified'
     | '/update-phone/verify-phone'
+    | '/verify-identity/back-id-verification'
     | '/verify-identity/choose-id'
+    | '/verify-identity/face-verification'
+    | '/verify-identity/front-id-verification'
+    | '/verify-identity/id-details'
+    | '/verify-identity/identity-verified'
+    | '/verify-identity/verify-personal-details'
     | '/add-phone-number'
     | '/calculator'
     | '/dashboard'
@@ -486,9 +568,16 @@ export interface FileRouteTypes {
     | '/payment-methods/card-added'
     | '/tokuen-info/privacy-policy'
     | '/tokuen-info/terms-and-conditions'
+    | '/top-up/top-up-main'
     | '/update-phone/number-verified'
     | '/update-phone/verify-phone'
+    | '/verify-identity/back-id-verification'
     | '/verify-identity/choose-id'
+    | '/verify-identity/face-verification'
+    | '/verify-identity/front-id-verification'
+    | '/verify-identity/id-details'
+    | '/verify-identity/identity-verified'
+    | '/verify-identity/verify-personal-details'
     | '/add-phone-number/'
     | '/calculator/'
     | '/dashboard/'
@@ -528,9 +617,16 @@ export interface RootRouteChildren {
   PaymentMethodsCardAddedRoute: typeof PaymentMethodsCardAddedRoute
   TokuenInfoPrivacyPolicyRoute: typeof TokuenInfoPrivacyPolicyRoute
   TokuenInfoTermsAndConditionsRoute: typeof TokuenInfoTermsAndConditionsRoute
+  TopUpTopUpMainRoute: typeof TopUpTopUpMainRoute
   UpdatePhoneNumberVerifiedRoute: typeof UpdatePhoneNumberVerifiedRoute
   UpdatePhoneVerifyPhoneRoute: typeof UpdatePhoneVerifyPhoneRoute
+  VerifyIdentityBackIdVerificationRoute: typeof VerifyIdentityBackIdVerificationRoute
   VerifyIdentityChooseIdRoute: typeof VerifyIdentityChooseIdRoute
+  VerifyIdentityFaceVerificationRoute: typeof VerifyIdentityFaceVerificationRoute
+  VerifyIdentityFrontIdVerificationRoute: typeof VerifyIdentityFrontIdVerificationRoute
+  VerifyIdentityIdDetailsRoute: typeof VerifyIdentityIdDetailsRoute
+  VerifyIdentityIdentityVerifiedRoute: typeof VerifyIdentityIdentityVerifiedRoute
+  VerifyIdentityVerifyPersonalDetailsRoute: typeof VerifyIdentityVerifyPersonalDetailsRoute
   AddPhoneNumberIndexRoute: typeof AddPhoneNumberIndexRoute
   CalculatorIndexRoute: typeof CalculatorIndexRoute
   DashboardIndexRoute: typeof DashboardIndexRoute
@@ -653,11 +749,53 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AddPhoneNumberIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/verify-identity/verify-personal-details': {
+      id: '/verify-identity/verify-personal-details'
+      path: '/verify-identity/verify-personal-details'
+      fullPath: '/verify-identity/verify-personal-details'
+      preLoaderRoute: typeof VerifyIdentityVerifyPersonalDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-identity/identity-verified': {
+      id: '/verify-identity/identity-verified'
+      path: '/verify-identity/identity-verified'
+      fullPath: '/verify-identity/identity-verified'
+      preLoaderRoute: typeof VerifyIdentityIdentityVerifiedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-identity/id-details': {
+      id: '/verify-identity/id-details'
+      path: '/verify-identity/id-details'
+      fullPath: '/verify-identity/id-details'
+      preLoaderRoute: typeof VerifyIdentityIdDetailsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-identity/front-id-verification': {
+      id: '/verify-identity/front-id-verification'
+      path: '/verify-identity/front-id-verification'
+      fullPath: '/verify-identity/front-id-verification'
+      preLoaderRoute: typeof VerifyIdentityFrontIdVerificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-identity/face-verification': {
+      id: '/verify-identity/face-verification'
+      path: '/verify-identity/face-verification'
+      fullPath: '/verify-identity/face-verification'
+      preLoaderRoute: typeof VerifyIdentityFaceVerificationRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/verify-identity/choose-id': {
       id: '/verify-identity/choose-id'
       path: '/verify-identity/choose-id'
       fullPath: '/verify-identity/choose-id'
       preLoaderRoute: typeof VerifyIdentityChooseIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/verify-identity/back-id-verification': {
+      id: '/verify-identity/back-id-verification'
+      path: '/verify-identity/back-id-verification'
+      fullPath: '/verify-identity/back-id-verification'
+      preLoaderRoute: typeof VerifyIdentityBackIdVerificationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/update-phone/verify-phone': {
@@ -672,6 +810,13 @@ declare module '@tanstack/react-router' {
       path: '/update-phone/number-verified'
       fullPath: '/update-phone/number-verified'
       preLoaderRoute: typeof UpdatePhoneNumberVerifiedRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/top-up/top-up-main': {
+      id: '/top-up/top-up-main'
+      path: '/top-up/top-up-main'
+      fullPath: '/top-up/top-up-main'
+      preLoaderRoute: typeof TopUpTopUpMainRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/tokuen-info/terms-and-conditions': {
@@ -848,9 +993,18 @@ const rootRouteChildren: RootRouteChildren = {
   PaymentMethodsCardAddedRoute: PaymentMethodsCardAddedRoute,
   TokuenInfoPrivacyPolicyRoute: TokuenInfoPrivacyPolicyRoute,
   TokuenInfoTermsAndConditionsRoute: TokuenInfoTermsAndConditionsRoute,
+  TopUpTopUpMainRoute: TopUpTopUpMainRoute,
   UpdatePhoneNumberVerifiedRoute: UpdatePhoneNumberVerifiedRoute,
   UpdatePhoneVerifyPhoneRoute: UpdatePhoneVerifyPhoneRoute,
+  VerifyIdentityBackIdVerificationRoute: VerifyIdentityBackIdVerificationRoute,
   VerifyIdentityChooseIdRoute: VerifyIdentityChooseIdRoute,
+  VerifyIdentityFaceVerificationRoute: VerifyIdentityFaceVerificationRoute,
+  VerifyIdentityFrontIdVerificationRoute:
+    VerifyIdentityFrontIdVerificationRoute,
+  VerifyIdentityIdDetailsRoute: VerifyIdentityIdDetailsRoute,
+  VerifyIdentityIdentityVerifiedRoute: VerifyIdentityIdentityVerifiedRoute,
+  VerifyIdentityVerifyPersonalDetailsRoute:
+    VerifyIdentityVerifyPersonalDetailsRoute,
   AddPhoneNumberIndexRoute: AddPhoneNumberIndexRoute,
   CalculatorIndexRoute: CalculatorIndexRoute,
   DashboardIndexRoute: DashboardIndexRoute,

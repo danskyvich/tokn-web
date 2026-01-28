@@ -1,6 +1,5 @@
-import FilledButton from "../../components/filled-button.tsx"
+import Button from "../../components/button.tsx"
 import Stack from '@mui/material/Stack'
-import OutlinedButton from "../../components/outlined-button.tsx"
 import { TextField, FormControl }  from '@mui/material'
 import './auth-entry.css'
 import { Link } from "@tanstack/react-router"
@@ -62,7 +61,7 @@ export default function AuthEntry() {
                     {/**Login and Register buttons */}
                     <div className='flex flex-1 flex-col h-fit mt-4 mb-2'>
                         <Stack spacing={2}>
-                            <FilledButton
+                            <Button
                                 buttonText={'Log in'}
                                 url={'/authentication/verify-email/'}
                                 textSize="text-[1rem]"
@@ -70,10 +69,9 @@ export default function AuthEntry() {
                             />
                         </Stack>
                         <p className='relative flex-1 self-center text-(--subheader) m-2'>or</p>
-                        <OutlinedButton
+                        <Button
                             buttonText={'Register'}
                             url={'/authentication/registration/'}
-                            textWeight='font-semibold'
                             textSize='text-[1rem]'
                             effects="black-button-outlined"
                         />

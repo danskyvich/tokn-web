@@ -1,6 +1,6 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenHeader from '../../../components/header-tokuen-logo'
-import FilledButton from '../../../components/filled-button'
+import FilledButton from '../../../components/button'
 
 export const Route = createFileRoute(
   '/authentication/forgot-password/password-changed',

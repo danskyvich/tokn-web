@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import Header from '../../components/header'
-import FilledButton from '../../components/filled-button'
+import FilledButton from '../../components/button'
 import AddIcon from '@mui/icons-material/Add';
 import classnames from 'classnames'
 

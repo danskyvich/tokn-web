@@ -115,6 +115,31 @@
       }
     }
   }
+
+  .black-button {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    font-weight: 700;
+    color: white;
+    border-radius: 12px;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: center;
+    padding: 2%;
+    background-color: black;
+
+    @variant hover {
+      background: gray;
+      border: 2px solid gray;
+
+      @variant active {
+        background: transparent;
+        border: 2px solid black;
+        color: black;
+      }
+    }
+  }
 }
 
 * {

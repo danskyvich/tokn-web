@@ -26,8 +26,8 @@ import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
 import DashboardHeader from '../../components/dashboard-header';
 import GeneralContainerBlack from '../../components/black-container';
 import Footer from '../../components/footer';
-import TransactionList from '../../components/transaction-list';
 import DashboardButton from '../../components/dashboard-button';
+import Transaction from '../../components/transaction';
 
 export const Route = createFileRoute('/dashboard/')({
   component: RouteComponent,
@@ -187,7 +187,10 @@ function RouteComponent() {
       </div>
 
       {/** Transactions and wallet */}
-      <TransactionList/>
+      <div className='flex flex-1 w-full h-fit p-5'>
+        <Transaction/>
+      </div>
+
       <Footer
         icon={'./../../../favicon.png'}
       />

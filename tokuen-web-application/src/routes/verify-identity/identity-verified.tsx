@@ -1,9 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
-import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import GenHeader from '../../components/header-tokuen-logo'
+import VerifiedUserIcon from '@mui/icons-material/VerifiedUser';
 import FilledButton from '../../components/button';
 
-export const Route = createFileRoute('/update-phone/number-verified')({
+export const Route = createFileRoute('/verify-identity/identity-verified')({
   component: RouteComponent,
 })
 
@@ -26,7 +26,8 @@ function RouteComponent() {
 
           {/**Texts */}
           <div className='flex flex-col flex-0 w-full h-fit'>
-            <p className='w-full h-fit px-12 text-[2rem] text-(--black) font-semibold text-center'>Your phone number has been verified!</p>
+            <p className='w-full h-fit px-12 text-[2rem] text-(--black) font-semibold text-center'>Your identity has been verified!</p>
+            <p className='flex-1 w-full h-fit px-[20%] text-(--subheader)'>You can now access all TOKUEN benefits</p>
           </div>
 
           {/**Verified Icon */}
@@ -34,12 +35,11 @@ function RouteComponent() {
             <VerifiedUserIcon sx={{ fontSize: '16rem'}}/>
           </div>
 
-
           <FilledButton
+            effects='black-button-outlined'
+            buttonText='Continue'
             url='/user-profile/'
             textSize=''
-            buttonText='Continue'
-            effects='purple-button-filled'
           />
         </div>
       </div>

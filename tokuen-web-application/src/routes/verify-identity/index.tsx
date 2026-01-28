@@ -2,7 +2,7 @@ import { createFileRoute } from '@tanstack/react-router'
 import Header from '../../components/header'
 import Face6Icon from '@mui/icons-material/Face6';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
-import FilledButton from '../../components/filled-button';
+import FilledButton from '../../components/button';
 
 export const Route = createFileRoute('/verify-identity/')({
   component: RouteComponent,
@@ -40,7 +40,7 @@ function RouteComponent() {
 
       <FilledButton
         buttonText='Verify your identity'
-        url=''
+        url='/verify-identity/choose-id'
         effects='black-button-outlined'
         textSize=''
       />

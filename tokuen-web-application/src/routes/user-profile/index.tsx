@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import Header from '../../components/header'
 import AvatarIcon from '../../components/user-avatar'
-import BlackButton from '../../components/black-button'
-import FilledButton from '../../components/filled-button'
+import Button from '../../components/button'
 
 {/** Material UI imports */}
 
@@ -63,7 +62,7 @@ function RouteComponent() {
           <br/>
           <p>To learn more, visit our&nbsp;<span className='font-bold hover:underline cursor-pointer'><Link to='/tokuen-info/privacy-policy'>Privacy Policy</Link></span></p>
           <br/>
-          <FilledButton
+          <Button
             url='/delete-account/'
             buttonText='Delete account'
             textSize='text-[1rem]'
@@ -75,9 +74,11 @@ function RouteComponent() {
           <p className='flex flex-[0 1 auto] w-full h-fit font-semibold text-3xl'>Verify your identity</p><br/>
           <p>Verify your identity to get access to more TOKUEN benefits!</p>
           <br/>
-          <BlackButton
-            text='Verify your identity now'
-            url=''
+          <Button
+            buttonText='Verify your identity'
+            effects='black-button'
+            textSize=''
+            url='/verify-identity/'
           />
         </div>
       </div>

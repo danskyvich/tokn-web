@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenHeader from '../../components/header-tokuen-logo'
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import FilledButton from '../../components/filled-button';
+import FilledButton from '../../components/button';
 
 export const Route = createFileRoute('/delete-account/account-deleted')({
   component: RouteComponent,

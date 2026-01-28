@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenHeader from '../../components/header-tokuen-logo'
 import CreditCardIcon from '@mui/icons-material/CreditCard'; 
-import FilledButton from '../../components/filled-button';
+import FilledButton from '../../components/button';
 
 export const Route = createFileRoute('/payment-methods/card-added')({
   component: RouteComponent,

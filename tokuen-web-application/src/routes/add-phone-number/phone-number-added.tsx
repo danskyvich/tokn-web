@@ -1,7 +1,7 @@
 import { createFileRoute } from '@tanstack/react-router'
 import GenHeader from '../../components/header-tokuen-logo'
 import VerifiedUserIcon from '@mui/icons-material/VerifiedUser'
-import FilledButton from '../../components/filled-button'
+import FilledButton from '../../components/button'
 
 export const Route = createFileRoute('/add-phone-number/phone-number-added')({
   component: RouteComponent,

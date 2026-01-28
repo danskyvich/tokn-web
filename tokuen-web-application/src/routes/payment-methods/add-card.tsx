@@ -2,7 +2,7 @@ import { createFileRoute, useRouter } from '@tanstack/react-router'
 import Header from '../../components/header'
 import { IconButton, TextField } from '@mui/material'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft'
-import FilledButton from '../../components/filled-button'
+import FilledButton from '../../components/button'
 
 
 export const Route = createFileRoute('/payment-methods/add-card')({
